@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 import { ApolloQueryResult } from '@apollo/client/core';
-import { Observable } from 'rxjs/internal/observable';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,8 @@ export class LoginService {
 
   constructor(private apollo: Apollo) { }
 
-  login(usernameOrEmail: string, password: string): Observable<ApolloQueryResult<unknown>> {
+  // tslint:disable-next-line: typedef
+  login(usernameOrEmail: string, password: string) {
     return this.apollo
         .watchQuery({
           query: gql`
