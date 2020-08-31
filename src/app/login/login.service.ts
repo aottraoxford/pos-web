@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
-import { ApolloQueryResult } from '@apollo/client/core';
-
 
 @Injectable({
   providedIn: 'root'
